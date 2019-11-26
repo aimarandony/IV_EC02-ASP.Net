@@ -1,0 +1,13 @@
+﻿@model IEnumerable<Semana09ASPNet.Models.Contribuyente>
+
+@{
+    ViewBag.Title = "Home";
+}
+
+<h3>CONTRIBUYENTE</h3>
+<hr />
+<p>
+    @Html.ActionLink("Nuevo Contribuyente", "Nuevo", null, new {@class="btn btn-primary" })
+</p>
+
+@Html.Partial("_PartialContribuyente")

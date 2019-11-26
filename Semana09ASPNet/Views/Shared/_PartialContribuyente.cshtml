@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Semana09ASPNet.Models.Contribuyente>
+
+<table class="table table-hover table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th>DNI</th>
+            <th>NOMBRE</th>
+            <th>APELLIDO</th>
+            <th>DISTRITO</th>
+            <th>DISTRITO</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model){
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.dnicont)</td>
+                <td>@Html.DisplayFor(modelItem => item.nomcont)</td>
+                <td>@Html.DisplayFor(modelItem => item.apecont)</td>
+                <td>@Html.DisplayFor(modelItem => item.dircont)</td>
+                <td>@Html.DisplayFor(modelItem => item.iddis)</td>
+                <td>@Html.ActionLink("Actualizar", "Edit", new { id = item.dnicont }, new { @class="btn btn-warning"})</td>
+            </tr>
+        }
+    </tbody>
+</table>
